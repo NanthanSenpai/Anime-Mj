@@ -1,0 +1,323 @@
+body {
+    background-image: url(images/alya.png);
+}
+/* Import vibrant fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto+Slab:wght@700&display=swap');
+
+/* Styling the navigation bar */
+.topnav {
+    display: flex;
+    justify-content: space-around; /* Space the links evenly */
+    background-color: #222222; /* Dark background for contrast */
+    padding: 10px 0;
+}
+
+.topnav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    transition: all 0.3s ease;
+}
+
+/* Apply vibrant anime-style hover effect */
+.topnav a:hover {
+    background-color: #ff3366; /* Electric pink background on hover */
+    color: white; /* Keep text white on hover */
+    text-shadow: 2px 2px 10px rgba(255, 51, 102, 0.8); /* Glowing neon pink shadow */
+    transform: scale(1.1); /* Slightly enlarge text on hover */
+}
+
+/* Adding a gap between About and Anime Maja YT */
+.topnav .anime-yt {
+    margin-left: 20px; /* Adds space between "About" and "Anime Maja YT" */
+    font-family: 'Roboto Slab', serif; /* Unique font for "Anime Maja YT" */
+    font-size: 20px; /* Larger font size */
+    color: #ffcc00; /* Fiery yellow for Anime Maja YT */
+    font-weight: bold;
+}
+
+/* Special hover effect for Anime Maja YT */
+.topnav .anime-yt:hover {
+    color: #ff6600; /* Bright orange on hover */
+    text-shadow: 2px 2px 15px rgba(255, 102, 0, 0.8); /* Glowing effect with orange */
+}
+
+/* Active link styling */
+.topnav a.active {
+    background-color: #00bcd4; /* Aqua blue background for active link */
+    color: white;
+}
+
+/* Optional: Active effect for Anime Maja YT link */
+.topnav .anime-yt.active {
+    background-color: #ff3366; /* Electric pink for active Anime Maja YT */
+    color: white;
+    text-shadow: 2px 2px 10px rgba(255, 51, 102, 0.8);
+}
+/*slideshow one start*/
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1250px;
+    position: relative;
+    margin: auto;
+    overflow: hidden; /* To ensure images are contained within the slideshow */
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Style for the images to ensure they are the same size */
+  .mySlides img {
+    width: 100%;
+    height: 400px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures the image covers the area without changing its aspect ratio */
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+/*slide show end*/
+/* Main container for Anime News and Updates */
+.anime-updates {
+    padding: 50px 0;
+    background-color: #222; /* Dark background */
+    color: #fff;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .section-heading {
+    font-family: 'Roboto Slab', serif;
+    font-size: 32px;
+    color: #ffcc00; /* Vibrant yellow for section titles */
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Card container as grid layout */
+  .news-section, .updates-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .news-card, .update-card {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .news-card:hover, .update-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image styling */
+  .news-img, .update-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Content styling */
+  .news-content, .update-content {
+    padding: 20px;
+  }
+  
+  .news-title, .update-title {
+    font-size: 20px;
+    color: #ff3366; /* Neon pink */
+    margin-bottom: 10px;
+  }
+  
+  .news-description, .update-description {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .read-more {
+    color: #ffcc00; /* Vibrant yellow */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .read-more:hover {
+    color: #fff;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .section-heading {
+      font-size: 24px;
+    }
+  }
+  
+/*ended news update*/
+
+/*footer start*/
+/* Footer Styling */
+.footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    color: #ccc;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ffcc00;
+}
+
+/* Footer Note */
+.footer-note {
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    color: #777;
+    font-size: 0.8rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+/*footer end*/
